@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  author: "lomboy philipp"
+  title: "body builders in tutus"
+  refreshed_at: "2020-12-13 19:32:35 UTC +00:00"
+  created_at: "2020-12-13 19:32:35 UTC +00:00"
+  updated_at: "2020-12-13 19:32:35 UTC +00:00"
+
+two:
+  author: "baldwyn leighton sir"
+  title: "before dorking lull the"
+  refreshed_at: "2020-12-13 19:32:35 UTC +00:00"
+  created_at: "2020-12-13 19:32:35 UTC +00:00"
+  updated_at: "2020-12-13 19:32:35 UTC +00:00"
