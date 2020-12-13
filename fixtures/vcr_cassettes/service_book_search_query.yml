@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?key=<KEY>&printType=books&projection=lite&q=%20inauthor:sambuchino%20intitle:how%20intitle:to%20intitle:survive%20intitle:a%20intitle:garden%20intitle:gnome%20intitle:attack
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 13 Dec 2020 03:02:26 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJraW5kIjogImJvb2tzI3ZvbHVtZXMiLAogICJ0b3RhbEl0ZW1zIjogMSwKICAiaXRlbXMiOiBbCiAgICB7CiAgICAgICJraW5kIjogImJvb2tzI3ZvbHVtZSIsCiAgICAgICJpZCI6ICJyVnJPQWdBQVFCQUoiLAogICAgICAiZXRhZyI6ICJuSFZuUDhHbWRMayIsCiAgICAgICJzZWxmTGluayI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9ib29rcy92MS92b2x1bWVzL3JWck9BZ0FBUUJBSiIsCiAgICAgICJ2b2x1bWVJbmZvIjogewogICAgICAgICJ0aXRsZSI6ICJIb3cgdG8gU3Vydml2ZSBhIEdhcmRlbiBHbm9tZSBBdHRhY2siLAogICAgICAgICJhdXRob3JzIjogWwogICAgICAgICAgIkNodWNrIFNhbWJ1Y2hpbm8iCiAgICAgICAgXSwKICAgICAgICAicHVibGlzaGVyIjogIlJhbmRvbSBIb3VzZSIsCiAgICAgICAgInB1Ymxpc2hlZERhdGUiOiAiMjAxNC0wNi0wNSIsCiAgICAgICAgImRlc2NyaXB0aW9uIjogIlRoZXJl4oCZcyBhIG5ldyB0aHJlYXQgaW4gdG93biDigJMgYW5kIGl04oCZcyBvbmx5IHR3ZWx2ZSBpbmNoZXMgdGFsbC4gSG93IHRvIFN1cnZpdmUgYSBHYXJkZW4gR25vbWUgQXR0YWNrIGlzIHRoZSBvbmx5IGNvbXByZWhlbnNpdmUgc3Vydml2YWwgZ3VpZGUgdGhhdCB3aWxsIGhlbHAgeW91IHByZXZlbnQsIHByZXBhcmUgZm9yLCBhbmQgd2FyZCBvZmYgYW4gaW1taW5lbnQgaG9tZSBpbnZhc2lvbiBieSB0aGUgY29tbW9uIGdhcmRlbiBnbm9tZS4gT25jZSB0aG91Z2h0IG9mIGFzIGhhcm1sZXNzIGdhcmRlbiBkZWNvcmF0aW9ucywgZXZpZGVuY2UgaXMgbW91bnRpbmcgdGhhdCB0aGVzZSBzbWlsaW5nIGxhd24gc3RhdHVlcyBhcmUgcG9pc2VkIGFuZCByZWFkeSB0byB3cmVjayBoYXZvYy4gVGhlIGRhbmdlciBpcyByZWFsLiBBbmQgaXTigJlzIGhlcmUuIENsYXNzIDEgZ25vbWUtc2xheWVyIGFuZCBnbm9tZSBkZWZlbmNlIGV4cGVydCBDaHVjayBTYW1idWNoaW5vIGhhcyBkZXZlbG9wZWQgYSBwcm92ZW4gc3lzdGVtIOKAkyBBc3Nlc3MsIFByb3RlY3QsIERlZmVuZCwgQXBwbHkg4oCTIGZvciBzYWZlZ3VhcmRpbmcgcHJvcGVydHksIHBvc3Nlc3Npb25zLCBhbmQgbG92ZWQgb25lcy4gU3RyYXRlZ2llcyBpbmNsdWRlIHN0ZXAtYnktc3RlcCBpbnN0cnVjdGlvbnMgZm9yIGdub21lLXByb29maW5nIHRoZSBhdmVyYWdlIGR3ZWxsaW5nLCByZWNvZ25pc2luZyBhbmQgaW50ZXJwcmV0aW5nIHRoZSBzaWducyBvZiBhIGdhdGhlcmluZyBob3JkZSBhbmQg4oCTIGluIHRoZSBldmVudCB0aGF0IGEgc2VjdXJlZCBwZXJpbWV0ZXIgaXMgYnJlYWNoZWQg4oCTIGNvbmZyb250aW5nIGFuZCBjb21iYXRpbmcgdGhlIGF0dGFja2VycyBhdCBjbG9zZSByYW5nZS4iLAogICAgICAgICJyZWFkaW5nTW9kZXMiOiB7CiAgICAgICAgICAidGV4dCI6IHRydWUsCiAgICAgICAgICAiaW1hZ2UiOiBmYWxzZQogICAgICAgIH0sCiAgICAgICAgIm1hdHVyaXR5UmF0aW5nIjogIk5PVF9NQVRVUkUiLAogICAgICAgICJhbGxvd0Fub25Mb2dnaW5nIjogZmFsc2UsCiAgICAgICAgImNvbnRlbnRWZXJzaW9uIjogIjIuMy40LjAucHJldmlldy4yIiwKICAgICAgICAicGFuZWxpemF0aW9uU3VtbWFyeSI6IHsKICAgICAgICAgICJjb250YWluc0VwdWJCdWJibGVzIjogZmFsc2UsCiAgICAgICAgICAiY29udGFpbnNJbWFnZUJ1YmJsZXMiOiBmYWxzZQogICAgICAgIH0sCiAgICAgICAgImltYWdlTGlua3MiOiB7CiAgICAgICAgICAic21hbGxUaHVtYm5haWwiOiAiaHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3MvY29udGVudD9pZD1yVnJPQWdBQVFCQUomcHJpbnRzZWM9ZnJvbnRjb3ZlciZpbWc9MSZ6b29tPTUmc291cmNlPWdic19hcGkiLAogICAgICAgICAgInRodW1ibmFpbCI6ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9jb250ZW50P2lkPXJWck9BZ0FBUUJBSiZwcmludHNlYz1mcm9udGNvdmVyJmltZz0xJnpvb209MSZzb3VyY2U9Z2JzX2FwaSIKICAgICAgICB9LAogICAgICAgICJwcmV2aWV3TGluayI6ICJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcz9pZD1yVnJPQWdBQVFCQUomZHE9aW5hdXRob3I6c2FtYnVjaGlubytpbnRpdGxlOmhvdytpbnRpdGxlOnRvK2ludGl0bGU6c3Vydml2ZStpbnRpdGxlOmEraW50aXRsZTpnYXJkZW4raW50aXRsZTpnbm9tZStpbnRpdGxlOmF0dGFjayZobD0mYXNfcHQ9Qk9PS1MmY2Q9MSZzb3VyY2U9Z2JzX2FwaSIsCiAgICAgICAgImluZm9MaW5rIjogImh0dHA6Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzP2lkPXJWck9BZ0FBUUJBSiZkcT1pbmF1dGhvcjpzYW1idWNoaW5vK2ludGl0bGU6aG93K2ludGl0bGU6dG8raW50aXRsZTpzdXJ2aXZlK2ludGl0bGU6YStpbnRpdGxlOmdhcmRlbitpbnRpdGxlOmdub21lK2ludGl0bGU6YXR0YWNrJmhsPSZhc19wdD1CT09LUyZzb3VyY2U9Z2JzX2FwaSIsCiAgICAgICAgImNhbm9uaWNhbFZvbHVtZUxpbmsiOiAiaHR0cHM6Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzL2Fib3V0L0hvd190b19TdXJ2aXZlX2FfR2FyZGVuX0dub21lX0F0dGFjay5odG1sP2hsPSZpZD1yVnJPQWdBQVFCQUoiCiAgICAgIH0sCiAgICAgICJzYWxlSW5mbyI6IHsKICAgICAgICAiY291bnRyeSI6ICJVUyIKICAgICAgfSwKICAgICAgImFjY2Vzc0luZm8iOiB7CiAgICAgICAgImNvdW50cnkiOiAiVVMiLAogICAgICAgICJlcHViIjogewogICAgICAgICAgImlzQXZhaWxhYmxlIjogdHJ1ZQogICAgICAgIH0sCiAgICAgICAgInBkZiI6IHsKICAgICAgICAgICJpc0F2YWlsYWJsZSI6IHRydWUKICAgICAgICB9LAogICAgICAgICJhY2Nlc3NWaWV3U3RhdHVzIjogIk5PTkUiCiAgICAgIH0sCiAgICAgICJzZWFyY2hJbmZvIjogewogICAgICAgICJ0ZXh0U25pcHBldCI6ICJIb3cgdG8gU3Vydml2ZSBhIEdhcmRlbiBHbm9tZSBBdHRhY2sgaXMgdGhlIG9ubHkgY29tcHJlaGVuc2l2ZSBzdXJ2aXZhbCBndWlkZSB0aGF0IHdpbGwgaGVscCB5b3UgcHJldmVudCwgcHJlcGFyZSBmb3IsIGFuZCB3YXJkIG9mZiBhbiBpbW1pbmVudCBob21lIGludmFzaW9uIGJ5IHRoZSBjb21tb24gZ2FyZGVuIGdub21lLiIKICAgICAgfQogICAgfQogIF0KfQo=
+  recorded_at: Sun, 13 Dec 2020 03:02:25 GMT
+recorded_with: VCR 6.0.0
