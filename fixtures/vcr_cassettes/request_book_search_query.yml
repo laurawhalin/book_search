@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?key=<KEY>&printType=books&projection=lite&q=%20intitle:the%20intitle:do%20intitle:it%20intitle:yourself%20intitle:lobotomy
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 13 Dec 2020 02:31:52 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "kind": "books#volumes",
+          "totalItems": 1,
+          "items": [
+            {
+              "kind": "books#volume",
+              "id": "k6dqWcXxQm0C",
+              "etag": "PtTanDc7OYM",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/k6dqWcXxQm0C",
+              "volumeInfo": {
+                "title": "The Do-It-Yourself Lobotomy",
+                "subtitle": "Open Your Mind to Greater Creative Thinking",
+                "authors": [
+                  "Tom Monahan"
+                ],
+                "publisher": "John Wiley & Sons",
+                "publishedDate": "2002-10-24",
+                "description": "An Adweek Book Master the techniques that top companies use to sparkcreativity In today's business environment, gaining the competitive edgethrough creative and original thinking is a crucial component ofbrand strategy. Creative leader of advertising Tom Monahan offers afresh look at the subject, providing hard and fast methods forfreeing the mind and inspiring active creativity in oneself andothers. His 180-degree Thinking(TM), 100 MPH Method, and othertechniques he employs in his creative consulting practice areeasy-to-use strategies for unleashing new ideas and facilitatingcreative product development, advertising, and marketing plans.This book has the added benefit of Monahan's experience of usingthese methods at A-list client companies.",
+                "readingModes": {
+                  "text": false,
+                  "image": true
+                },
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "2.1.0.0.preview.1",
+                "panelizationSummary": {
+                  "containsEpubBubbles": false,
+                  "containsImageBubbles": false
+                },
+                "imageLinks": {
+                  "smallThumbnail": "http://books.google.com/books/content?id=k6dqWcXxQm0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                  "thumbnail": "http://books.google.com/books/content?id=k6dqWcXxQm0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=k6dqWcXxQm0C&printsec=frontcover&dq=intitle:the+intitle:do+intitle:it+intitle:yourself+intitle:lobotomy&hl=&as_pt=BOOKS&cd=1&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=k6dqWcXxQm0C&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=k6dqWcXxQm0C"
+              },
+              "saleInfo": {
+                "country": "US",
+                "listPrice": {
+                  "amount": 35,
+                  "currencyCode": "USD"
+                },
+                "retailPrice": {
+                  "amount": 35,
+                  "currencyCode": "USD"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=k6dqWcXxQm0C&rdid=book-k6dqWcXxQm0C&rdot=1&source=gbs_api",
+                "offers": [
+                  {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                      "amountInMicros": 35000000,
+                      "currencyCode": "USD"
+                    },
+                    "retailPrice": {
+                      "amountInMicros": 35000000,
+                      "currencyCode": "USD"
+                    },
+                    "giftable": true
+                  }
+                ]
+              },
+              "accessInfo": {
+                "country": "US",
+                "epub": {
+                  "isAvailable": false
+                },
+                "pdf": {
+                  "isAvailable": true,
+                  "acsTokenLink": "http://books.google.com/books/download/The_Do_It_Yourself_Lobotomy-sample-pdf.acsm?id=k6dqWcXxQm0C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "accessViewStatus": "SAMPLE"
+              },
+              "searchInfo": {
+                "textSnippet": "This book can help anyone think more creatively.&quot; - Lee Clow, Chairman and Worldwide Creative Director, TBWA \\Chiat\\Day &quot;Tom Monahan jiggles your brain loose."
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 13 Dec 2020 02:31:51 GMT
+recorded_with: VCR 6.0.0

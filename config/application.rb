@@ -33,5 +33,9 @@ module BookSearch
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Autoload lib and services directories
+    config.autoload_paths += %W(#{config.root}/services/google_books)
+    config.autoload_paths += %W(#{config.root}/lib/google_books_api)
   end
 end
