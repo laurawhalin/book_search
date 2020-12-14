@@ -37,5 +37,6 @@ module BookSearch
     # Autoload lib and services directories
     config.autoload_paths += %W(#{config.root}/services/google_books)
     config.autoload_paths += %W(#{config.root}/lib/google_books_api)
+    config.autoload_paths += %W(#{config.root}/app/errors)
   end
 end

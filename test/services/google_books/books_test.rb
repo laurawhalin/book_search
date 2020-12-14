@@ -38,9 +38,8 @@ class BooksTest < ActiveSupport::TestCase
   test "searches a book title" do
     VCR.use_cassette("service_book_search_query") do
       params = { author: "Sambuchino", title: "How to Survive a Garden Gnome Attack" }
-      books, error = GoogleBooks::Books.search(params)
+      books = GoogleBooks::Books.search(params)
       assert books.first.is_a?(GoogleBooks::Books)
-      assert_nil error
     end
   end
 
@@ -48,16 +47,18 @@ class BooksTest < ActiveSupport::TestCase
     VCR.use_cassette("multiple_books_query") do
       params = { title: "Fashion Cats" }
       response = GoogleBooks::Books.search(params)
-      books, _error = GoogleBooks::Books.search(params)
+      books = GoogleBooks::Books.search(params)
       assert books.count > 1
     end
   end
 
-  test "search returns errors from API" do
+  test "error raises Exceptions::QueryError" do
     VCR.use_cassette("empty_query") do
-      result = GoogleBooks::Books.search({})
-      assert_equal 400, result.last[:status]
-      assert result.last[:message]
+      assert_raises Exceptions::QueryError do
+        result = GoogleBooks::Books.search({})
+        assert_equal 400, result.last[:status]
+        assert result.last[:message]
+      end
     end
   end
 end

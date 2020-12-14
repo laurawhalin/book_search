@@ -20,11 +20,14 @@ module GoogleBooks
     def self.search(params)
       query    = format_author_and_title_query(params)
       response = Request.books_search(query)
-      books    = response.fetch("items", []).map do |book|
+
+      # Errors are rendered in the error_handler concern.
+      # To-Do: Could raise other errors depending on status.
+      raise Exceptions::QueryError, response[:errors][:message] if response[:errors]
+
+      response.fetch("items", []).map do |book|
         Books.new(book)
       end
-
-      [books, response[:errors]]
     end
 
     # convert query params into format Google Books API expects

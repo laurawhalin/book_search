@@ -44,4 +44,13 @@ class SearchesControllerTest < ActionDispatch::IntegrationTest
       end
     end
   end
+
+  test "#create 400 status for empty query" do
+    VCR.use_cassette("search_errors") do
+      params = { attributes: { author: "", title: "" } }
+      post searches_url, params: params
+      assert 400, response.status
+      assert "Missing query.", response.body
+    end
+  end
 end
