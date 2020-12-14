@@ -17,4 +17,31 @@ class SearchesControllerTest < ActionDispatch::IntegrationTest
       assert JSON.parse(response.body).count > 0
     end
   end
+
+  test "#create saves a new search" do
+    assert_difference "Search.count", 1 do
+      VCR.use_cassette("service_book_search_query") do
+        post searches_url, params: @params
+      end
+    end
+  end
+
+  test "#create updates refreshed_at of an existing search" do
+    assert_difference "Search.count", 0 do
+      VCR.use_cassette("update_existing_search") do
+        existing_search = Search.first
+        refresh_date = existing_search.refreshed_at
+        params = {
+          attributes: {
+            author: existing_search.author,
+            title: existing_search.title
+          }
+        }
+
+        post searches_url, params: params
+        updated_search = existing_search.reload
+        refute_equal refresh_date, updated_search.refreshed_at
+      end
+    end
+  end
 end

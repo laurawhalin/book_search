@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?key=<KEY>&printType=books&projection=lite&q=%20inauthor:baldwyn%20inauthor:leighton%20inauthor:sir%20intitle:before%20intitle:dorking%20intitle:lull%20intitle:the
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 13 Dec 2020 22:34:08 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "kind": "books#volumes",
+          "totalItems": 1,
+          "items": [
+            {
+              "kind": "books#volume",
+              "id": "rj9ryQEACAAJ",
+              "etag": "r7QdEVhIokA",
+              "selfLink": "https://www.googleapis.com/books/v1/volumes/rj9ryQEACAAJ",
+              "volumeInfo": {
+                "title": "The lull before Dorking",
+                "authors": [
+                  "sir Baldwyn Leighton (8th bart.)"
+                ],
+                "publishedDate": "1871",
+                "readingModes": {
+                  "text": false,
+                  "image": false
+                },
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                  "containsEpubBubbles": false,
+                  "containsImageBubbles": false
+                },
+                "previewLink": "http://books.google.com/books?id=rj9ryQEACAAJ&dq=inauthor:baldwyn+inauthor:leighton+inauthor:sir+intitle:before+intitle:dorking+intitle:lull+intitle:the&hl=&as_pt=BOOKS&cd=1&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=rj9ryQEACAAJ&dq=inauthor:baldwyn+inauthor:leighton+inauthor:sir+intitle:before+intitle:dorking+intitle:lull+intitle:the&hl=&as_pt=BOOKS&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/The_lull_before_Dorking.html?hl=&id=rj9ryQEACAAJ"
+              },
+              "saleInfo": {
+                "country": "US"
+              },
+              "accessInfo": {
+                "country": "US",
+                "epub": {
+                  "isAvailable": false
+                },
+                "pdf": {
+                  "isAvailable": false
+                },
+                "accessViewStatus": "NONE"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 13 Dec 2020 22:34:09 GMT
+recorded_with: VCR 6.0.0
