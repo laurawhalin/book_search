@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Book Searcher
+This project is an API that consumes the Google Books API to search books by title and author.
 
-Things you may want to cover:
+To search, use the following curl request:
 
-* Ruby version
+```
+curl POST \
+-H "Content-type: application/json" \
+-H "Accept: application/json" \
+-d '{"attributes":{"title":"How to Survive a Garden Gnome Attack","author":"Sambuchino"}}' \
+"http://localhost:3000/searches/"
+```
 
-* System dependencies
+You can sort the results by most relevant or newest:
+`-d '{"attributes":{...},"sort":{"newest": true}}'`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can filter the results by ebook availiability:
+`-d '{"attributes":{...},"filter":{"ebook": true}}'`
