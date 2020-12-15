@@ -53,4 +53,16 @@ class SearchesControllerTest < ActionDispatch::IntegrationTest
       assert "Missing query.", response.body
     end
   end
+
+  test "#create can filter results on ebook availability" do
+    VCR.use_cassette("ebook_query") do
+      params = {
+        attributes: { author: "Toshikazu Kawaguchi", title: "Before the Coffee Gets Cold" },
+        filter: { ebook: true }
+      }
+      post searches_url, params: params
+      assert_response 200
+      assert JSON.parse(response.body).first["ebook"]
+    end
+  end
 end
