@@ -17,10 +17,11 @@ module GoogleBooks
       @title        = volume_info.fetch("title", "")
     end
 
-    def self.search(params, filter)
+    def self.search(params, filter, sort)
       query    = format_author_and_title_query(params)
-      filter   = format_filter_query(filter)
-      response = Request.books_search(query, filter)
+      filter   = format_filter_query(filter) if filter
+      sort     = format_sort_query(sort) if sort
+      response = Request.books_search(query, filter, sort)
 
       # Errors are rendered in the error_handler concern.
       # To-Do: Could raise other errors depending on status.
@@ -47,6 +48,10 @@ module GoogleBooks
 
     def self.format_filter_query(filter)
       "&filter=ebooks" if filter[:ebook] == "true"
+    end
+
+    def self.format_sort_query(filter)
+      "&orderBy=#{filter.keys.first}"
     end
   end
 end

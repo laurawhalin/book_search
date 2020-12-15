@@ -8,7 +8,7 @@ class SearchesController < ApplicationController
     search = Search.find_or_create_by(search_params)
     search ? search.update(search_params) : search.save
 
-    @books = GoogleBooks::Books.search(search_params, params[:filter])
+    @books = GoogleBooks::Books.search(search_params, params[:filter], params[:sort])
     json_response(@books, :ok)
   end
 

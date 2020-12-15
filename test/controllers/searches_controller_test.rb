@@ -65,4 +65,17 @@ class SearchesControllerTest < ActionDispatch::IntegrationTest
       assert JSON.parse(response.body).first["ebook"]
     end
   end
+
+  test "#create can sort by publish date" do
+    VCR.use_cassette("sort_by_newest_query") do
+      params = {
+        attributes: { author: "George Eliot", title: "Middlemarch" },
+        sort: { newest: true }
+      }
+      post searches_url, params: params
+      books = JSON.parse(response.body)
+      assert_response 200
+      assert books.first["publish_date"] > books.last["publish_date"]
+    end
+  end
 end
